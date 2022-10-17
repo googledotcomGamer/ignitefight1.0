@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://LevelSelect.gd" type="Script" id=1]
+[ext_resource path="res://laflame.png" type="Texture" id=2]
+[ext_resource path="res://Textures/levelselect.png" type="Texture" id=3]
+[ext_resource path="res://Textures/MicrosoftTeams-image.png" type="Texture" id=4]
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 1024.0
+rect_scale = Vector2( 1, 0.576475 )
+texture = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 417.158
+margin_top = 164.673
+margin_right = 1441.16
+margin_bottom = 1188.67
+rect_scale = Vector2( 0.187356, 0.171609 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 62.5213
+margin_top = 165.566
+margin_right = 1086.52
+margin_bottom = 1189.57
+rect_scale = Vector2( 0.220204, 0.180334 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.938
+margin_top = -262.095
+margin_right = 107.062
+margin_bottom = -241.095
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LaFlameButton" type="Button" parent="VBoxContainer"]
+margin_right = 209.0
+margin_bottom = 20.0
+text = "La Flame"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 510.727, 295.96 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -441.645
+margin_top = -262.095
+margin_right = -232.645
+margin_bottom = -241.095
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="The Hoops" type="Button" parent="VBoxContainer2"]
+margin_right = 209.0
+margin_bottom = 20.0
+text = "The Hoops"
+
+[connection signal="pressed" from="VBoxContainer/LaFlameButton" to="." method="_on_LaFlameButton_pressed"]
